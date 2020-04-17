@@ -18,15 +18,26 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Rechercher" aria-label="Rechercher">
+                <input class="form-control mr-sm-2" v-debounce="search" type="text" placeholder="Rechercher" aria-label="Rechercher">
             </form>
         </div>
     </nav>
 </template>
 
 <script>
+    import ocsDataServices from "../services/OCSDataServices";
+
     export default {
         name: 'Header',
+
+        methods: {
+            search(val) {
+                ocsDataServices.search(val)
+                    .then(response => {
+                        this.$emit('searchResult', response.data);
+                    })
+            }
+        }
     }
 </script>
 
