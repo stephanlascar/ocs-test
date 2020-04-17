@@ -1,10 +1,15 @@
-import Vue from 'vue'
-import App from './App.vue'
-import vueDebounce from 'vue-debounce'
+import Vue from 'vue';
+import vueDebounce from 'vue-debounce';
+import router from "./router";
+import App from './App.vue';
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-Vue.config.productionTip = false
-Vue.use(vueDebounce)
+Vue.config.productionTip = false;
+Vue.use(vueDebounce);
+
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  render: h => h(App)
+}).$mount('#app');
