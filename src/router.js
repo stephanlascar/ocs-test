@@ -12,6 +12,16 @@ export default new Router({
             path: "/search",
             name: "search",
             component: () => import("@/views/Search")
+        }, {
+            path: "/programme/:id",
+            component: () => import("@/views/Programme")
+        }, {
+            path: "/serie/:id",
+            component: () => import("@/views/Serie")
+        }, {
+            path: "/watch/:id",
+            name: "watch",
+            component: () => import("@/views/Watch")
         }
     ]
 });
