@@ -1,7 +1,9 @@
 <template>
     <div id="app">
-        <Header v-on:searchResult="onSearchResult"/>
-        <router-view></router-view>
+        <Header/>
+        <div class="container-fluid">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 
@@ -12,11 +14,6 @@
         name: 'App',
         components: {
             Header
-        },
-        methods: {
-            onSearchResult(toto) {
-                console.log(toto);
-            }
         }
     }
 </script>
