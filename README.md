@@ -1,24 +1,26 @@
-# yaocsc
+# Yet Another OCS Client Library 
 
-## Project setup
+Ma petite implémentation réalisée après avoir passée quelques heures tardives à implémenter l'API de la documentation.
+
+Librairies utilisées:
+ * VueJS
+ * vue-router
+ * vuex
+ * Shaka-Player
+ * Bootstrap
+ * Jest
+
+## Initialisation du projet
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Lancement des tests
+```
+npm run test:unit
+```
+
+## Lancement
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
