@@ -25,21 +25,12 @@
 </template>
 
 <script>
-    //import ocsDataServices from "../services/OCSDataServices";
-
     export default {
         name: 'Header',
 
         methods: {
             search(val) {
-                console.log("=========", val);
-                this.$router.push({path: 'search', query: {q: val}});
-                /*ocsDataServices.search(val)
-                    .then(response => {
-
-                        console.log(response);
-                        //this.$emit('searchResult', response.data);
-                    })*/
+                this.$router.push({name: 'search', query: {q: val}});
             }
         }
     }

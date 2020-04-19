@@ -34,7 +34,7 @@ describe('Header.vue', () => {
         jest.advanceTimersByTime(300);
 
         expect($router.push).toHaveBeenCalledTimes(1);
-        expect($router.push).toBeCalledWith({path: "search", query: {q: "search terms"}});
+        expect($router.push).toBeCalledWith({name: "search", query: {q: "search terms"}});
     });
 
     test('wait some ms before redirect to search page', () => {
@@ -50,7 +50,7 @@ describe('Header.vue', () => {
         jest.advanceTimersByTime(300);
 
         expect($router.push).toHaveBeenCalledTimes(1);
-        expect($router.push).toBeCalledWith({path: "search", query: {q: "the lord of the rings"}});
+        expect($router.push).toBeCalledWith({name: "search", query: {q: "the lord of the rings"}});
     });
 });
 
