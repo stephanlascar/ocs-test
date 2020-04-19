@@ -8,6 +8,10 @@ export default new Router({
         {
             path: "/",
             component: () => import("@/views/Home"),
+        }, {
+            path: "/search",
+            name: "search",
+            component: () => import("@/views/Search")
         }
     ]
 });
